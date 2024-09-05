@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman's portfolio</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images\logo.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li> 
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </nav>
+            <div class="header-txt">
+                <p>UI/UX DESIGNER</p>
+                <h1>Hi, I'm <span>Aman</span> <br>  From Ludhiana</h1> 
+
+            </div>
+
+        </div>
+       
+     
+        
+
+<!-- about -->
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                     <img src="images/user.png" alt="">
+                </div>
+                <div class="about-col-2">
+                     <h1 class="subtitle">About Me</h1>
+                     <p class="para">
+                        I am <span>Aman</span>Aman, a passionate and dedicated fresher frontend developer who recently graduated from Guru Nanak Dev Engineering College, Ludhiana. With a strong foundation in HTML, CSS, and JavaScript, I am skilled in creating responsive and user-friendly web applications. My academic projects have honed my ability to collaborate effectively and solve complex problems. I am eager to contribute to innovative projects and continuously learn new technologies to enhance my skills. I am excited to start my professional journey and make a positive impact in the tech industry..
+                     </p>
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experiance</p>
+                     </div>
+                     <div class="tab-contents active-tab" id="Skills">
+                        <ul class="a ">
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Designing Web/App interfaces</li>
+                            <li><span>App Development</span><br>Designing Web/App interfaces</li>
+
+
+                        </ul>
+                         
+                     </div>
+                     <div class="tab-contents" id="education">
+                        <ul class="a ">
+                            <li><span>10th</span><br>Govt. High School Brahampuri, Ludhiana<br>Passing out Year <span>2019</span><br>Percentage Scored <span>93.53</span></li>
+                            <li><span>12th</span> <br> Meritorious School, Ludhiana<br>Passing out Year <span>2021</span><br> Percentage Scored <span>91.8</span></li>
+                            <li><span>BTech</span><br>Guru Nanak Dev Engineering College, Ludhiana<br> Passing out Year <span>2025</span><br></output>CGPA <SPAN>7.61</SPAN></li>
+                            
+
+                        </ul>
+                        
+                     </div> 
+                     <div class="tab-contents" id="experience">
+                        <ul class="a ">
+                            <li><span>Fresher</span><br>Designing Web/App interfaces</li>
+                            
+                            
+
+                        </ul>
+                        
+                     </div> 
+                </div>
+            </div>
+        </div>
+            
+    </div>
+
+/* -------Services------- */
+,
+<div id="services">
+    <div class="containers">
+        <h1 class="sub-title"> My services </h1>
+        <div class="service-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>lorem
+
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links")
+        var tabcontents= document.getElementsByClassName("tab-contents")
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>
