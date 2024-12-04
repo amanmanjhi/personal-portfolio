@@ -1,9 +1,16 @@
+
+@font-face {
+    font-family: 'Poppins';
+    src: url("/static/RedHatText-Bold.ttf");
+}
 *{
     margin:0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    
 }
+
 body{
     background-color: black;
 
@@ -11,13 +18,14 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url("images/background.png");
+   
     background-size: cover;
     background-position: right;
 
+
 } 
 .container{
-    padding:10px 10% ;
+    padding:10px 50px ;
 }
 
 nav{
@@ -34,10 +42,18 @@ nav ul{
     
     
 }
-.logo{
+#name-logo-link{
+    text-decoration: none;
+}
+.name-logo{
+    color: white;
+    font-size: 60px;
     width: 220px;
     justify-content: space-evenly;
 
+}
+.name-logo>span{
+    color: #ff004f;
 }
 nav ul li{
     justify-content: flex-end;
@@ -67,18 +83,35 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
+.header-txt{
+    display: flex;
+    flex-direction: row;
+
+}
+.intro{
+    padding: 50px 0 0;
+    
+}
+.image{
+    position: absolute;
+    right: -150px;
+    bottom: -150px;
+    scale: 0.7;
+    z-index: -1;
+}
 .header-txt p{ 
     margin-top: 2%;
-    font-size: 30px;
+    font-size: 40px;
     color: aliceblue;
-    opacity: 70%;
+    opacity: 60%;
+    font-weight: 100;
 
 
 }
 
 .header-txt h1{
     margin-top: 1%;
-    font-size: 60px;
+    font-size: 90px;
     color: white;
 }
 
@@ -109,6 +142,7 @@ nav ul li a:hover::after{
 #about{
     padding: 80px 0;
     color: #c2b8b8 ;
+    font-size: 20px;
 }
 .row{
     display: flex;
@@ -122,19 +156,21 @@ nav ul li a:hover::after{
 .about-col-1 img{
     width: 100%;
     border-radius: 15px;
+    
 }
 .about-col-2{
     flex-basis: 60%;
 }
-.subtitle{
+.sub-title{
     font-size: 60px;
     font-weight: 100;
-    font-family: 'Gill Sans';
+    font-family: 'Poppins';
     justify-content: center;
+    color: white;
 }
 .para
 {
-    font-size: small;
+    font-size: 15px;
     font-weight: 200;
 }
 .tab-titles{
@@ -193,13 +229,132 @@ nav ul li a:hover::after{
 
  /*----- services -----*/
 
- .service-list{
+ #services{
+    padding: 30px 50px;
+
+ }
+ .services-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
+    color: white;
  }
- #services{
+
+ .services-list div{
+    background-color: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s ;
+ }
+
+ .services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+ }
+ .services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+ }
+ .services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+ }
+
+ .services-list div:hover{
+    background-color: #ff004f;
+    transform: translateY(-10px);
+ }
+
+
+ /* ------portfolio-------- */
+
+ #portfolio{
+   
+    color: #fff;
+    
+ }
+
+ .work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+
+ }
+
+ .work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+ }
+
+ .work img{
+    width:100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+
+ }
+
+ .layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+ }
+
+ .layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+ }
+
+ .layer a{
+    margin-top: 20px;
+    color: #ff004f !important;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius:50px;
+    text-align: center;
+
+ }
+
+.work:hover img{
+    transform: scale(1.1);
+}
+ 
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
     width: fit-content;
-    align-items: last baseline;
- }
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: aliceblue;
+}
